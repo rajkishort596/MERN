@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Finder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>University Finder</h1>
+    <form method="get" class="form">
+      <div class="input-group">
+        <label for="Country_name">Country Name:</label>
+        <input type="text" name="Country_name" id="Country_name" />
+      </div>
+      <div class="input-group">
+        <label for="State_name">State Name:</label>
+        <input type="text" name="State_name" id="State_name" />
+      </div>
+      <button>Search</button>
+    </form>
+    <div class="UniversityResult"></div>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="university.js"></script>
+  </body>
+</html>

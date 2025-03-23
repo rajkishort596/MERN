@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+h1 {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: #333;
+  font-size: 5em;
+}
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 70%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: 800;
+}
+.catBox,
+.dogBox {
+  display: grid;
+  padding: 1.5em;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  place-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 2.5rem;
+}
+.catBox img,
+.dogBox img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+@media screen and (max-width: 768px) {
+  .catBox,
+  .dogBox {
+    grid-template-columns: 1fr;
+  }
+}
