@@ -4,16 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <h1>Instagram</h1>
-    <h3>Welcome instagram user <%=username %></h3>
-    <ul>
-      <% for(follower of followers){ %>
-
-      <li><%=follower %></li>
-
+    <h3>Welcome instagram user <%= data.name %></h3>
+    <div class="btns">
+      <button class="follow-btn" data-follow="false">Follow</button>
+      <button>Message</button>
+    </div>
+    <div class="flex">
+      <span>Followers: <%=data.followers%> </span>
+      <span>Following: <%=data.following%> </span>
+    </div>
+    <hr />
+    <div class="posts">
+      <% for(post of data.posts){ %>
+      <div class="post">
+        <img src="<%= post.image %>" />
+        <div class="text-center">
+          <span><%=post.likes%> likes</span>
+          &nbsp;&nbsp;
+          <span><%=post.comments%> comments</span>
+        </div>
+      </div>
       <% } %>
-    </ul>
+      <script src="/app.js"></script>
+    </div>
+    <!-- Include footer -->
+    <%- include("includes/footer.ejs") %>
   </body>
 </html>

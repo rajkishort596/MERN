@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: aliceblue;
+}
+h1,
+h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+.btns,
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #251cc5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+}
+.posts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.text-center {
+  text-align: center;
+}
+img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+footer {
+  background-color: black;
+  width: 100%;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 2.5rem;
+}
