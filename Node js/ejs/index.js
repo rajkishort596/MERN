@@ -13,6 +13,12 @@ app.set("views", path.join(__dirname, "/views")); // set the views directory
 app.get("/", (req, res) => {
   res.render("home.ejs"); // render the home.ejs file
 });
+
+app.get("/rolldice", (req, res) => {
+  let diceval = Math.floor(Math.random() * 6) + 1;
+  // res.render("home.ejs", { diceval: diceval });
+  res.render("home.ejs", { diceval }); // render the home.ejs file with the dice value
+});
 app.get("/about", (req, res) => {
   res.send("welcome to about section");
 });
