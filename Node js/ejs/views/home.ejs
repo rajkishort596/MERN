@@ -15,6 +15,10 @@
     <h3>dicevalue bieng paased from server to home.ejs</h3>
     <!--Outputs the value into the template (HTML escaped)  -->
     <h3><%= diceval %></h3>
+
+    <% if(diceval === 6){ %>
+    <h3>Nice! You can roll again</h3>
+    <% } %>
     <p>
       What is the "E" for? "Embedded?" Could be. How about "Effective,"
       "Elegant," or just "Easy"? EJS is a simple templating language that lets

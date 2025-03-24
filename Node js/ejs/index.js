@@ -19,6 +19,13 @@ app.get("/rolldice", (req, res) => {
   // res.render("home.ejs", { diceval: diceval });
   res.render("home.ejs", { diceval }); // render the home.ejs file with the dice value
 });
+
+app.get("/insta/:username", (req, res) => {
+  const { username } = req.params;
+  const followers = ["john", "jane", "doe"];
+  res.render("instagram.ejs", { username, followers }); // render the instagram.ejs file
+});
+
 app.get("/about", (req, res) => {
   res.send("welcome to about section");
 });
