@@ -6,6 +6,7 @@ app.listen(8080, () => {
   console.log("Server is running on port 8080");
 });
 
+//?ejs: embedded javascript template
 app.set("view engine", "ejs"); // set the view engine to ejs
 app.set("views", path.join(__dirname, "/views")); // set the views directory
 
