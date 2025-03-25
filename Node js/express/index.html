@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get and Post</title>
+  </head>
+  <body>
+    <h1>handling get and post requests in express</h1>
+    <h3>handling get requests</h3>
+    <form method="get" action="http://localhost:8080/login">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" />
+      <button type="submit">Submit</button>
+    </form>
+    <h3>handling post requests</h3>
+    <form method="post" action="http://localhost:8080/login">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
