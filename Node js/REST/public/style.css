@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+  font-family: "Roboto", sans-serif;
+}
+.text-center {
+  text-align: center;
+}
+.red {
+  color: red;
+}
+a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+
+.post {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #8d8d8d;
+  background-color: #ccc;
+  border-radius: 0.25rem;
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+input,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #8d8d8d;
+  border-radius: 0.25rem;
+  outline: none;
+  width: 40%;
+}
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  font-size: 0.5rem;
+}
+.delete {
+  background-color: red;
+}
+.edit {
+  background-color: orange;
+}
+.create {
+  background-color: green;
+  margin: 0 auto;
+  display: block;
+}
