@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1 class="text-center">Edit Your Information</h1>
+    <form
+      action="/users/<%= user.id %>?_method=PATCH"
+      method="Post"
+      class="create-form"
+    >
+      <label
+        >Username:
+        <input
+          type="text"
+          name="username"
+          value="<%= user.username %>"
+          required /></label
+      ><br />
+      <label
+        >Email:
+        <input
+          type="email"
+          name="email"
+          value="<%= user.email %>"
+          required /></label
+      ><br />
+      <label
+        >Enter Password:
+        <input type="password" name="password" required /></label
+      ><br />
+      <button type="submit" class="view">Change</button>
+    </form>
+    <p class="error text-center"><%= error %></p>
+  </body>
+</html>

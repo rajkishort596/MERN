@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User details</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1 class="text-center">User Details</h1>
+    <div class="card">
+      <p><strong>ID:</strong> <%= user.id %></p>
+      <p><strong>Username:</strong> <%= user.username %></p>
+      <p><strong>Email:</strong> <%= user.email %></p>
+      <div class="flex">
+        <a class="edit" href="/users/edit/<%= user.id %>">Edit</a>
+        <form
+          action="/users/delete/<%= user.id %>?_method=DELETE"
+          method="POST"
+        >
+          <button class="delete" type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

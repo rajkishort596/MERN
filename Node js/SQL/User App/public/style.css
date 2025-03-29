@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+/* Centering the container */
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.create {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.create:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styling */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Headers */
+th {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+/* Table Rows */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternating Row Colors */
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover Effect */
+tr:hover {
+  background-color: #e9ecef;
+  transition: 0.3s;
+}
+
+/* Actions Column */
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Action Buttons */
+.view,
+.edit,
+.delete {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view {
+  background-color: #28a745;
+  color: white;
+}
+
+.view:hover {
+  background-color: #218838;
+}
+
+.edit {
+  background-color: #ffc107;
+  color: white;
+}
+
+.edit:hover {
+  background-color: #e0a800;
+}
+
+.delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: #c82333;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+/* Container Styling */
+.create-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Label Styling */
+.create-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input Styling */
+.create-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.create-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Button Styling */
+.create-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.create-form button:hover {
+  background-color: #0056b3;
+}
+.error {
+  color: red;
+  font-size: 1.25rem;
+}
