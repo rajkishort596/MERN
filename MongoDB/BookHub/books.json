@@ -1,0 +1,73 @@
+[
+    {
+      "title": "गोदान",
+      "englishTitle": "Godaan",
+      "author": "मुंशी प्रेमचंद",
+      "description": "यह उपन्यास भारतीय किसान की गरीबी और सामाजिक अन्याय की कहानी है।",
+      "image": "/images/godaan.jpg"
+    },
+    {
+      "title": "गबन",
+      "englishTitle": "Gaban",
+      "author": "मुंशी प्रेमचंद",
+      "description": "एक मध्यमवर्गीय व्यक्ति के नैतिक पतन और सामाजिक दबाव की कहानी।",
+      "image": "/images/gaban.jpg"
+    },
+    {
+      "title": "निर्मला",
+      "englishTitle": "Nirmala",
+      "author": "मुंशी प्रेमचंद",
+      "description": "बाल विवाह और दहेज प्रथा की कड़वी सच्चाई को दर्शाने वाला उपन्यास।",
+      "image": "/images/nirmala.jpg"
+    },
+    {
+      "title": "कर्मभूमि",
+      "englishTitle": "Karmabhoomi",
+      "author": "मुंशी प्रेमचंद",
+      "description": "एक सामाजिक-राजनीतिक उपन्यास जो गांधीवादी विचारधारा को दर्शाता है।",
+      "image": "/images/karmabhoomi.jpg"
+    },
+    {
+      "title": "प्रेमाश्रम",
+      "englishTitle": "Premashram",
+      "author": "मुंशी प्रेमचंद",
+      "description": "यह उपन्यास किसानों की कठिनाइयों और सामाजिक अन्याय पर केंद्रित है।",
+      "image": "/images/premashram.jpg"
+    },
+    {
+      "title": "रंगभूमि",
+      "englishTitle": "Rangbhoomi",
+      "author": "मुंशी प्रेमचंद",
+      "description": "यह उपन्यास एक नेत्रहीन भिखारी सूरदास के संघर्ष की कहानी है।",
+      "image": "/images/rangbhoomi.webp"
+    },
+    {
+      "title": "सेवासदन",
+      "englishTitle": "Sevasadan",
+      "author": "मुंशी प्रेमचंद",
+      "description": "यह उपन्यास महिलाओं की सामाजिक स्थिति और नैतिकता की पड़ताल करता है।",
+      "image": "/images/sevasadan.jpg"
+    },
+    {
+      "title": "मंगलसूत्र",
+      "englishTitle": "Mangalsutra",
+      "author": "मुंशी प्रेमचंद",
+      "description": "प्रेमचंद का अधूरा उपन्यास जो भारतीय नारी की स्थिति को दर्शाता है।",
+      "image": "/images/mangalsutra.jpg"
+    },
+    {
+      "title": "ठाकुर का कुआँ",
+      "englishTitle": "Thakur Ka Kuan",
+      "author": "मुंशी प्रेमचंद",
+      "description": "छुआछूत और जातिगत भेदभाव पर एक मार्मिक कहानी।",
+      "image": "/images/thakur-ka-kuan.jpg"
+    },
+    {
+      "title": "पूस की रात",
+      "englishTitle": "Poos Ki Raat",
+      "author": "मुंशी प्रेमचंद",
+      "description": "गरीब किसान हल्कू की कड़ाके की ठंड में संघर्ष की कहानी।",
+      "image": "/images/poos-ki-raat.jpg"
+    }
+  ]
+  
