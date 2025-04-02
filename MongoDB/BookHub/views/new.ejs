@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= book ? "Edit Book" : "Add New Book" %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1><%= book ? "Edit Book 📖" : "Add New Book ➕" %></h1>
+
+    <form
+      action="<%= book ? '/books/update/' + book._id + '?_method=PUT' : '/books/create' %>"
+      method="POST"
+      class="book-form"
+    >
+      <label for="title">📚 Title:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        required
+        value="<%= book ? book.title : '' %>"
+      />
+
+      <label for="author">✍ Author:</label>
+      <input
+        type="text"
+        id="author"
+        name="author"
+        required
+        value="<%= book ? book.author : '' %>"
+      />
+
+      <label for="description">📝 Description:</label>
+      <textarea id="description" name="description" required>
+<%= book ? book.description : '' %></textarea
+      >
+
+      <label for="image">🖼️ Cover Image URL:</label>
+      <input
+        type="text"
+        id="image"
+        name="image"
+        required
+        value="<%= book ? book.image : '' %>"
+      />
+
+      <button type="submit" class="btn btn-submit">
+        <%= book ? "Update Book ✅" : "Create Book ➕" %>
+      </button>
+    </form>
+
+    <a href="/books" class="btn btn-back">🔙 Back to Library</a>
+  </body>
+</html>

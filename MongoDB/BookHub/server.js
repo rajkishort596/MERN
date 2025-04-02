@@ -1,9 +1,9 @@
 import express, { urlencoded } from "express";
 import mongoose from "mongoose";
-import router from "./routes/bookRoutes.js";
+import bookRouter from "./routes/bookRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import methodOverride from "method-override";
 const app = express();
 
 // Convert import.meta.url to __dirname equivalent in ESM
@@ -15,6 +15,9 @@ const port = 8080;
 // Middleware to parse JSON requests
 app.use(express.json());
 
+// Use method-override to support DELETE and PUT methods via POST
+app.use(methodOverride("_method"));
+
 // Middleware to parse URL-encoded form data (normal form submissions)
 app.use(express.urlencoded({ extended: true }));
 
@@ -23,7 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "public/css")));
 
 // Routes
-app.use("/books", router);
+app.use("/books", bookRouter);
 
 main()
   .then((res) => {

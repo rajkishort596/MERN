@@ -3,10 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Book Library</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <%= books %>
+    <h1>📚 Online Book Library</h1>
+
+    <!-- Create New Book Button -->
+    <a href="/books/new" class="btn btn-create">➕ Add New Book</a>
+
+    <div class="book-container">
+      <% books.forEach(book => { %>
+      <div class="book-card">
+        <img
+          src="<%= book.image %>"
+          alt="<%= book.title %>"
+          class="book-cover"
+        />
+        <hr />
+        <div class="book-info">
+          <h2><%= book.title %></h2>
+          <h3>✍ <%= book.author %></h3>
+          <p><%= book.description %></p>
+
+          <!-- Edit & Delete Buttons -->
+          <div class="book-actions">
+            <a href="/books/edit/<%= book._id %>" class="btn btn-edit"
+              >✏️ Edit</a
+            >
+            <form
+              action="/books/delete/<%= book._id %>?_method=DELETE"
+              method="POST"
+              class="delete-form"
+            >
+              <button type="submit" class="btn btn-delete">🗑️ Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
   </body>
 </html>
