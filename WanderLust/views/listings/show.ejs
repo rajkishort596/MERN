@@ -1,24 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wanderlust</title>
-  </head>
-  <body>
-    <h3>Listing Details :</h3>
-    <ul>
-      <li><%= listing.title %></li>
-      <li><%= listing.description %></li>
-      <li>&#8377; <%= listing.price.toLocaleString("en-IN") %></li>
-      <li><%= listing.location %></li>
-      <li><%= listing.country %></li>
-    </ul>
-    <br />
-    <a href="/listings/<%= listing._id %>/edit">Edit this Listing</a>
-    <br /><br />
-    <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
-      <button>Delete this listing</button>
-    </form>
-  </body>
-</html>
+<% layout('/layouts/boilerplate') %>
+<body>
+  <div class="row justify-content-center py-5">
+    <div class="col-md-6">
+      <h3>Listing Details :</h3>
+
+      <div class="card">
+        <img
+          src="<%= listing.image %>"
+          class="card-img-top show-img"
+          alt="listing image"
+        />
+        <div class="card-body">
+          <p class="card-text fw-bold"><%= listing.title %></p>
+          <p class="card-text mb-0"><%= listing.description %></p>
+          <p class="card-text mb-0">
+            &#8377; <%= listing.price.toLocaleString("en-IN") %>
+          </p>
+          <p class="card-text mb-0"><%= listing.location %></p>
+          <p class="card-text mb-0"><%= listing.country %></p>
+        </div>
+      </div>
+      <div class="d-flex gap-5 align-items-center">
+        <a href="/listings/<%= listing._id %>/edit"
+          ><button class="btn btn-lg edit-btn">Edit</button>
+        </a>
+        <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
+          <button class="btn btn-lg btn-dark delete-btn">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

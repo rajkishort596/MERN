@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+/* Navbar styles */
+.navbar {
+  min-height: 5rem;
+  background-color: white;
+}
+.fa-compass {
+  font-size: 2.5rem;
+  color: #fe434d;
+}
+.nav-link {
+  color: #222222 !important;
+}
+/* footer styles */
+.f-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #ebebeb;
+}
+.f-info-links a {
+  text-decoration: none;
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+/* Cards Styles */
+.card {
+  border: none !important;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  height: 20rem !important;
+  object-fit: cover !important;
+}
+.card-img-overlay {
+  opacity: 0;
+  background-color: white;
+}
+.card-img-overlay:hover {
+  opacity: 0.2 !important;
+}
+.listing-link {
+  color: #222222 !important;
+  text-decoration: none !important;
+}
+/* New form styles */
+.add-btn,
+.edit-btn {
+  background-color: #fe434d !important;
+  border: none !important;
+  width: 100% !important;
+  color: white;
+}
+/* Show Page Styles */
+.show-img {
+  height: 30vh;
+}
+.delete-btn {
+  border: none !important;
+}
