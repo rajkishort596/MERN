@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const ExpressError = require("./ExpressError");
 const port = 8080;
 
 /* --------------------------------------
@@ -13,7 +14,7 @@ const checkAccess = (req, res, next) => {
     next(); // continue to route handler
   } else {
     // Throw custom error if token is invalid/missing
-    throw new Error("Access Denied");
+    next(new ExpressError(401, "Access Denied"));
   }
 };
 
@@ -46,7 +47,25 @@ app.get("/users", (req, res) => {
 app.get("/api", checkAccess, (req, res) => {
   res.send("Secret Data");
 });
-
+/* --------------------------------------------
+    Route: /err — Used to test error handling
+   -------------------------------------------- */
+app.get("/err", (req, res) => {
+  abcd = abcd;
+});
+/* --------------------------------------------
+    Route: /admin
+   -------------------------------------------- */
+app.get("/admin", (req, res) => {
+  throw new ExpressError(403, "Access to admin is forbidden!");
+});
+/* --------------------------------------------
+   Global Error handling middleware
+   -------------------------------------------- */
+app.use((err, req, res, next) => {
+  const { status = 500, message = "Something went wrong" } = err;
+  res.status(status).send(message);
+});
 /* -----------------------------------------------
    Catch-All Middleware for 404 (Not Found) Errors
    ----------------------------------------------- */
