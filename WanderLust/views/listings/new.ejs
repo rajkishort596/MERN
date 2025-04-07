@@ -3,7 +3,12 @@
   <div class="row justify-content-center py-3">
     <div class="col-md-6">
       <h3 class="text-center">Create a New Listing</h3>
-      <form method="POST" action="/listings">
+      <form
+        method="POST"
+        action="/listings"
+        class="needs-validation"
+        novalidate
+      >
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
           <input
@@ -12,7 +17,10 @@
             type="text"
             placeholder="Enter Title"
             class="form-control"
+            required
           />
+
+          <div class="invalid-feedback">Please Enter a Title</div>
         </div>
         <div class="mb-3">
           <label for="description" class="form-label">Description</label>
@@ -20,7 +28,10 @@
             name="listing[description]"
             id="description"
             class="form-control"
+            required
           ></textarea>
+
+          <div class="invalid-feedback">Please Enter a Description</div>
         </div>
         <div class="mb-3">
           <label for="imgUrl" class="form-label">Image Link</label>
@@ -41,7 +52,9 @@
               type="number"
               class="form-control"
               id="price"
+              required
             />
+            <div class="invalid-feedback">Pirice should be valid</div>
           </div>
           <div class="mb-3 col-md-8">
             <label for="country" class="form-label">Country</label>
@@ -51,7 +64,9 @@
               type="text"
               id="country"
               class="form-control"
+              required
             />
+            <div class="invalid-feedback">Please Enter a country</div>
           </div>
         </div>
         <div class="mb-3">
@@ -62,9 +77,11 @@
             type="text"
             class="form-control"
             id="location"
+            required
           />
+          <div class="invalid-feedback">Please Enter a location</div>
         </div>
-        <button class="btn-lg btn btn-dark add-btn">Add</button>
+        <button class="btn-lg btn btn-dark add-btn" type="submit">Add</button>
       </form>
     </div>
   </div>
