@@ -37,7 +37,7 @@ body {
   text-decoration: underline;
 }
 /* Cards Styles */
-.card {
+.listingcard {
   border: none !important;
   margin-bottom: 2rem;
   width: 100%;
