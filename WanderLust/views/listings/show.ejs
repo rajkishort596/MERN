@@ -27,12 +27,13 @@
           <button class="btn btn-lg btn-dark delete-btn">Delete</button>
         </form>
       </div>
+      <hr />
     </div>
-    <hr />
+
     <div class="reviews col-md-6">
       <h4>Leave a Reviews</h4>
       <form
-        action="/listings/<%= listing.id %>/review"
+        action="/listings/<%= listing.id %>/reviews"
         method="post"
         class="needs-validation"
         novalidate
@@ -71,6 +72,14 @@
             <h5 class="card-title">John Doe</h5>
             <p class="card-text"><%= review.comment %></p>
             <p class="card-text"><%= review.rating %> stars</p>
+            <form
+              action="/listings/<%= listing.id %>/reviews/<%= review.id %>?_method=DELETE"
+              method="post"
+            >
+              <button type="submit" class="btn btn-sm btn-danger">
+                delete
+              </button>
+            </form>
           </div>
         </div>
         <% }) %>

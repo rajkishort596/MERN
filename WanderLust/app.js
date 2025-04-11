@@ -8,7 +8,7 @@ const ejsMate = require("ejs-mate");
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const ExpressError = require("./utils/ExpressError.js");
 const wrapAsync = require("./utils/wrapAsync.js");
-const { listingSchema } = require("./schema.js");
+const { listingSchema, reviewSchema } = require("./schema.js");
 const Review = require("./models/review.js");
 
 main()
@@ -126,7 +126,7 @@ app.delete(
 
 //Review Post Route
 app.post(
-  "/listings/:id/review",
+  "/listings/:id/reviews",
   validateReview,
   wrapAsync(async (req, res, next) => {
     let listing = await Listing.findById(req.params.id);
@@ -137,6 +137,17 @@ app.post(
     await listing.save();
     console.log(newReview, newReview._id);
     res.redirect(`/listings/${req.params.id}`);
+  })
+);
+
+//Review Delete Route
+app.delete(
+  "/listings/:id/reviews/:reviewId",
+  wrapAsync(async (req, res, next) => {
+    const { id, reviewId } = req.params;
+    await Listing.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
+    await Review.findByIdAndDelete(reviewId);
+    res.redirect(`/listings/${id}`);
   })
 );
 
