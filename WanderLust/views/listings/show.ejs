@@ -11,6 +11,7 @@
           alt="listing image"
         />
         <div class="card-body">
+          <p class="card-text mb-0">Owned by:-<%= listing.owner.username %></p>
           <p class="card-text mb-0"><%= listing.description %></p>
           <p class="card-text mb-0">
             &#8377; <%= listing.price.toLocaleString("en-IN") %>
@@ -19,6 +20,7 @@
           <p class="card-text mb-0"><%= listing.country %></p>
         </div>
       </div>
+      <% if(curUser && curUser._id.equals(listing.owner._id)){ %>
       <div class="d-flex gap-5 align-items-center">
         <a href="/listings/<%= listing._id %>/edit"
           ><button class="btn btn-lg edit-btn">Edit</button>
@@ -27,10 +29,13 @@
           <button class="btn btn-lg btn-dark delete-btn">Delete</button>
         </form>
       </div>
+      <% } %>
+
       <hr />
     </div>
 
     <div class="reviews col-md-6">
+      <% if(curUser){ %>
       <h4>Leave a Reviews</h4>
       <form
         action="/listings/<%= listing.id %>/reviews"
@@ -64,12 +69,13 @@
         <button type="submit" class="btn btn-sm btn-dark">add</button>
       </form>
       <hr />
+      <% } %>
       <h4>All Reviews</h4>
       <div class="row">
         <% listing.reviews.forEach(review => { %>
         <div class="card col-5 ms-3 mb-3">
           <div class="card-body">
-            <h5 class="card-title">John Doe</h5>
+            <h5 class="card-title"><% review.author.username %></h5>
             <p class="card-text"><%= review.comment %></p>
             <p class="card-text"><%= review.rating %> stars</p>
             <form
