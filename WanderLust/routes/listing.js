@@ -3,6 +3,7 @@ const router = express.Router({ mergeParams: true });
 const wrapAsync = require("../utils/wrapAsync.js");
 const { listingSchema } = require("../schema.js");
 const Listing = require("../models/listing.js");
+const Review = require("../models/review.js");
 const ExpressError = require("../utils/ExpressError.js");
 const { isLoggedIn, isOwner, validateListing } = require("../middleware.js");
 
@@ -30,16 +31,16 @@ router.get(
   wrapAsync(async (req, res, next) => {
     let { id } = req.params;
 
-    const listing = await Listing.findById(id)
+    const listing = await Listing.findById(req.params.id)
+      .populate("owner") // populate owner of the listing
       .populate({
         path: "reviews",
         populate: {
           path: "author",
-          model: "User", // optional but sometimes helps
+          model: "User", // optional if consistent
         },
-      })
-      .populate("owner");
-    console.log(listing);
+      });
+    // console.log(listing.reviews[0].author.username);
     if (!listing) {
       req.flash("error", "listing you requested for does not exist");
       return res.redirect("/listings");
