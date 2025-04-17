@@ -37,9 +37,9 @@
           <label for="imgUrl" class="form-label">Image Link</label>
           <input
             name="listing[image]"
-            value="<%= listing.image %>"
+            value="<%= listing.image.filename %>"
             id="imgUrl"
-            type="text"
+            type="file"
             class="form-control"
             required
           />
