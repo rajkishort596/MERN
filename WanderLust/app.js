@@ -8,9 +8,9 @@ const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
 const listingRoutes = require("./routes/listing.js");
 const reviewRoutes = require("./routes/review.js");
@@ -28,11 +28,23 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(process.env.MONOGO_URL);
 }
 
+const store = MongoStore.create({
+  mongoUrl: process.env.MONOGO_URL,
+  crypto: {
+    secret: process.env.SECRET,
+  },
+  touchAfter: 24 * 3600,
+});
+
+store.on("error", () => {
+  console.log("Monogo Session store error ", err);
+});
 const sessionOptions = {
-  secret: "mysupersecret",
+  store,
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -64,15 +76,6 @@ app.use((req, res, next) => {
   res.locals.curUser = req.user;
   next();
 });
-
-// app.get("/demouser", async (req, res) => {
-//   let newUser = new User({
-//     email: "rajkishort596@gmail.com",
-//     username: "raj",
-//   });
-//   let registerdUser = await User.register(newUser, "rajkishort123");
-//   res.send(registerdUser);
-// });
 
 // Middleware to use routers
 app.use("/listings", listingRoutes);
