@@ -1,9 +1,9 @@
 import "./App.css";
-import Card from "./Card.jsx";
+import Products from "./Products";
 function App() {
-  return (
+  return(
     <>
-      <Card />
+      <Products/>
     </>
   );
 }
