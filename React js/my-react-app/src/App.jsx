@@ -1,9 +1,9 @@
 import "./App.css";
-import Products from "./Products";
+import Post from "./Post.jsx";
 function App() {
   return(
     <>
-      <Products/>
+      <Post/>
     </>
   );
 }
