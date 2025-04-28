@@ -1,9 +1,8 @@
-import "./App.css";
-import Post from "./Post.jsx";
+import TodoList from "./TodoList.jsx";
 function App() {
   return(
     <>
-      <Post/>
+      <TodoList/>
     </>
   );
 }
