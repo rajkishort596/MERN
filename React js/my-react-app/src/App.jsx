@@ -1,8 +1,14 @@
-import TodoList from "./TodoList.jsx";
+import Lottery from "./Lottery.jsx";
+import "./App.css";
+import { sum } from "./helper.js";
 function App() {
-  return(
+  const winCondition = (ticket) => {
+    // return sum(ticket)===15;
+    return ticket[0] === 0;
+  };
+  return (
     <>
-      <TodoList/>
+      <Lottery n={3} winCondition={winCondition} />
     </>
   );
 }

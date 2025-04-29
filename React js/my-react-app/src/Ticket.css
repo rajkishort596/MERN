@@ -1,0 +1,26 @@
+.Ticket {
+  border: 2px solid pink;
+  border-radius: 14px;
+  padding: 2rem 5rem;
+}
+.Ticket {
+  text-align: center;
+  color: #e0e0e0;
+  padding: 40px 0;
+  margin: 30px auto;
+  width: 250px;
+  border: 2px solid #f8d7da;
+  border-radius: 12px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Ticket:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+.Ticket.winner {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
