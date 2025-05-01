@@ -1,5 +1,5 @@
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
-const API_KEY = "9af54e93552de8df3838281f622df177";
+const API_KEY = "Your_OpenWeather_Secret_Kry";
 
 const getWeather = async (city) => {
   const response = await fetch(
