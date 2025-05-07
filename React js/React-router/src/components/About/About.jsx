@@ -7,8 +7,9 @@ const About = () => {
         <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
           <div className="md:5/12 lg:w-5/12">
             <img
-              src="https://lh5.googleusercontent.com/proxy/X-6g85koptYCeFqnroyETNkFJmXeeLia4-RANB-ayA_zO3FHz7tyUCDwsUvk-tBEPRsROtGMXtpoFmWSSWOFcNLIAsDnm-7IOHEeCw18a6x6Buvr0oNz1erMFFxi5ss6QrfHrnF5Wwm85tzi2LCsz1_YbD25ufmgaXbnZahXkBgdzSkRgJYfjkPnen0aj-Z3J5yQZ-X9eRKAihGuH32FOa3h"
+              src="https://cdn2.thecatapi.com/images/kxUakBB2o.jpg"
               alt="image"
+              className="w-full h-72 object-cover rounded-md mb-3"
             />
           </div>
           <div className="md:7/12 lg:w-6/12">
