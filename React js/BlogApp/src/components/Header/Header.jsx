@@ -37,7 +37,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="py-3 shadow bg-gray-500">
+    <header className="bg-white shadow-md text-gray-800 px-6 py-4 flex justify-between items-center">
       <Container>
         <nav className="flex">
           <div className="mr-4 flex justify-center items-center">
@@ -51,7 +51,7 @@ const Header = () => {
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
+                    className="inline-bock cursor-pointer px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
                   >
                     {item.name}
                   </button>
@@ -59,7 +59,7 @@ const Header = () => {
               ) : null
             )}
             {authStatus && (
-              <li>
+              <li className="cursor-pointer">
                 <LogoutBtn />
               </li>
             )}
